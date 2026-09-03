@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  <title>Telemetria & Tempi | Ricky Dog</title>
+  <meta name="description" content="Classifica ufficiale e tempi sul giro di Spec Labs su Le Mans Ultimate e Gran Turismo 7. Invia il tuo tempo e sfida il laboratorio.">
+  <meta name="keywords" content="Ricky Dog tempi, SimRacing telemetria, Le Mans Ultimate giro veloce, Gran Turismo 7 record, Spec Labs leaderboard">
+  <meta name="author" content="Ricky Dog">
+  <link rel="canonical" href="https://rickydog.it/tempi.html">
+
+  <link rel="icon" type="image/png" href="logo.webp">
+  <link rel="stylesheet" href="stile.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rickydog.it/tempi.html">
+  <meta property="og:title" content="Telemetria & Tempi - Ricky Dog">
+  <meta property="og:description" content="Consulta la tabella aggiornata dei tempi sul giro o invia la tua telemetria per sfidare Spec Labs.">
+  <meta property="og:image" content="https://rickydog.it/logo.webp">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Telemetria & Tempi - Ricky Dog">
+  <meta name="twitter:description" content="Classifica sul giro unico e telemetria ufficiale di Spec Labs.">
+  <meta name="twitter:image" content="https://rickydog.it/logo.webp">
+ </head>
+ <body>
+  <nav class="navbar-floating" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 20px;">
+    <div class="logo" style="display: flex; align-items: center; gap: 15px;">
+      <img src="io.webp" style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover; border: 2px solid #ff0000;">
+      Ricky Dog
+      <span class="status-badge">
+        <span class="status-dot-live"></span>
+        LAB ONLINE
+      </span>
+    </div>
+    
+    <div class="nav-links">
+          <h2><a href="index.html" class="home">Home</a></h2>
+          <h2><a href="strumenti.html" class="strumenti">Strumenti</a></h2>
+          <h2><a href="bio.html" class="bio">Bio</a></h2>
+          <h2><a href="servizi.html" class="servizi">Servizi</a></h2>
+    </div>
+  </nav>
+
+  <div class="hero-container">
+    <img src="pilotone5.webp" alt="Ricky Dog SimRacing Telemetry" class="hero-image">
+    <div class="hero-content">
+      <h2 class="titolo-servizi">Telemetria & Tempi ⏱️</h2>
+      <p>La lavagna dei tempi registrati a <span class="rosso">caldo</span> in pista. <span class="rosso">SFIDA IL LAB!</span> 🏎️</p>
+    </div>
+  </div>
+
+  <div class="marquee-container">
+    <div class="marquee-text">
+      I freni servono solo a chi non ha abbastanza coraggio per impostare la curva — Parola di Ricky Dog.
+    </div>
+  </div>
+
+<div style="max-width: 1200px; width: 95%; margin: 25px auto 0 auto; display: flex; flex-wrap: wrap; gap: 15px; justify-content: space-between; align-items: center; background: #181818; padding: 15px 20px; border-radius: 8px; border: 2px solid #ff0000; box-sizing: border-box;">
+  
+  <div style="display: flex; align-items: center; gap: 10px; flex: 1; min-width: 250px;">
+    <label for="ricerca-specboard" style="color: #aaa; font-weight: bold; font-size: 1rem;">🔍 Cerca nella Spec Board:</label>
+    <input type="text" id="ricerca-specboard" placeholder="Pilota, Pista, Auto, Sim..." style="width: 100%; background: #111; color: #fff; border: 1px solid #ff0000; padding: 10px 14px; border-radius: 6px; font-size: 0.95rem; outline: none;">
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <label for="ordina-per" style="color: #aaa; font-weight: bold; font-size: 1rem;">⚙️ Ordina per:</label>
+    <select id="ordina-per" style="background: #111; color: #fff; border: 1px solid #ff0000; padding: 10px 14px; font-size: 0.95rem; border-radius: 6px; cursor: pointer;">
+      <option value="data-desc">Data (Più recenti)</option>
+      <option value="data-asc">Data (Più vecchi)</option>
+      <option value="tempo-asc">Tempo (Più veloci 🚀)</option>
+      <option value="tempo-desc">Tempo (Più lenti 🐢)</option>
+    </select>
+  </div>
+
+</div>
+
+<div style="overflow-x: auto; width: 100%; max-width: 1200px; margin: 15px auto 40px auto; border-radius: 8px; border: 2px solid #ff0000; box-sizing: border-box;">
+  <table id="specBoardTable" style="width: 100%; border-collapse: collapse; background: #111; color: #fff; text-align: left;">
+    <thead>
+      <tr style="background: #ff0000; color: #000; font-weight: bold;">
+        <th style="padding: 14px;">Pilota</th>
+        <th style="padding: 14px;">Simulatore</th>
+        <th style="padding: 14px;">Auto</th>
+        <th style="padding: 14px;">Pista</th>
+        <th style="padding: 14px;">Data</th>
+        <th style="padding: 14px;">Tempo Giro</th>
+        <th style="padding: 14px;">Note</th>
+      </tr>
+    </thead>
+
+<!-- 23. 28/08/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Imola" data-data="2026-08-28" data-tempo="93.861">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">Ferrari 499P</td>
+  <td style="padding: 14px;">Imola</td>
+  <td style="padding: 14px;">28/08/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">1:33.861</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">Carico: 88 L (100% EV)</td>
+</tr>
+
+<!-- 22. 14/08/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Imola" data-data="2026-08-14" data-tempo="93.983">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">Ferrari 499P</td>
+  <td style="padding: 14px;">Imola</td>
+  <td style="padding: 14px;">14/08/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">1:33.983</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">Carico: 88 L (100% EV)</td>
+</tr>
+
+<!-- 21. 01/08/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Spa-Francorchamps" data-data="2026-08-01" data-tempo="141.820">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">Ferrari 296 GT3</td>
+  <td style="padding: 14px;">Spa-Francorchamps</td>
+  <td style="padding: 14px;">01/08/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">2:21.820</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">Carico: 88 L (100% EV)</td>
+</tr>
+
+<!-- 20. 01/08/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Spa-Francorchamps" data-data="2026-08-01" data-tempo="124.632">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">Ferrari 499P</td>
+  <td style="padding: 14px;">Spa-Francorchamps</td>
+  <td style="padding: 14px;">01/08/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">2:04.632</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">Carico: 89 L (100% EV)</td>
+</tr>
+
+<!-- 19. 20/07/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Spa-Francorchamps" data-data="2026-07-20" data-tempo="125.249">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">Ferrari 499P</td>
+  <td style="padding: 14px;">Spa-Francorchamps</td>
+  <td style="padding: 14px;">20/07/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">2:05.249</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">-</td>
+</tr>
+
+<!-- 18. 20/07/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Spa-Francorchamps" data-data="2026-07-20" data-tempo="125.553">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">Ferrari 499P</td>
+  <td style="padding: 14px;">Spa-Francorchamps</td>
+  <td style="padding: 14px;">20/07/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">2:05.553</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">-</td>
+</tr>
+
+<!-- 17. 30/06/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Monza" data-data="2026-06-30" data-tempo="111.400">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">McLaren 720S GT3 Evo</td>
+  <td style="padding: 14px;">Monza</td>
+  <td style="padding: 14px;">30/06/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">1:51.4XX</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">-</td>
+</tr>
+
+<!-- 16. 12/06/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Le Mans" data-data="2026-06-12" data-tempo="214.678">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">Ferrari 499P</td>
+  <td style="padding: 14px;">Le Mans</td>
+  <td style="padding: 14px;">12/06/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">3:34.678</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">-</td>
+</tr>
+
+<!-- 15. 07/06/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Sebring" data-data="2026-06-07" data-tempo="123.715">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">McLaren 720S GT3 Evo</td>
+  <td style="padding: 14px;">Sebring</td>
+  <td style="padding: 14px;">07/06/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">2:03.715</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">-</td>
+</tr>
+
+<!-- 14. 20/05/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Spa-Francorchamps" data-data="2026-05-20" data-tempo="140.143">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">Ferrari 296 GT3</td>
+  <td style="padding: 14px;">Spa-Francorchamps</td>
+  <td style="padding: 14px;">20/05/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">2:20.143</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">-</td>
+</tr>
+
+<!-- 13. 19/05/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Imola" data-data="2026-05-19" data-tempo="105.200">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">Ferrari 296 GT3</td>
+  <td style="padding: 14px;">Imola</td>
+  <td style="padding: 14px;">19/05/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">1:45.200</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">-</td>
+</tr>
+
+<!-- 12. 14/05/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Spa-Francorchamps" data-data="2026-05-14" data-tempo="141.200">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">McLaren 720S GT3 Evo</td>
+  <td style="padding: 14px;">Spa-Francorchamps</td>
+  <td style="padding: 14px;">14/05/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">2:21.2XX</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">-</td>
+</tr>
+
+<!-- 11. 16/04/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Sebring" data-data="2026-04-16" data-tempo="123.642">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">Ford Mustang GT3</td>
+  <td style="padding: 14px;">Sebring</td>
+  <td style="padding: 14px;">16/04/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">2:03.642</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">-</td>
+</tr>
+
+<!-- 10. 04/04/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Spa-Francorchamps" data-data="2026-04-04" data-tempo="141.601">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">Ford Mustang GT3</td>
+  <td style="padding: 14px;">Spa-Francorchamps</td>
+  <td style="padding: 14px;">04/04/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">2:21.601</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">-</td>
+</tr>
+
+<!-- 9. 03/04/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Spa-Francorchamps" data-data="2026-04-03" data-tempo="141.681">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">McLaren 720S GT3 Evo</td>
+  <td style="padding: 14px;">Spa-Francorchamps</td>
+  <td style="padding: 14px;">03/04/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">2:21.681</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">-</td>
+</tr>
+
+<!-- 8. 03/04/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Spa-Francorchamps" data-data="2026-04-03" data-tempo="129.633">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">Oreca 07 (LMP2)</td>
+  <td style="padding: 14px;">Spa-Francorchamps</td>
+  <td style="padding: 14px;">03/04/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">2:09.633</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">-</td>
+</tr>
+
+<!-- 7. 02/04/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Imola" data-data="2026-04-02" data-tempo="93.800">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">Genesis GMR-001</td>
+  <td style="padding: 14px;">Imola</td>
+  <td style="padding: 14px;">02/04/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">1:33.8XX</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">-</td>
+</tr>
+
+<!-- 6. 02/04/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Fuji" data-data="2026-04-02" data-tempo="103.391">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">Aston Martin Vantage GT3 Evo</td>
+  <td style="padding: 14px;">Fuji</td>
+  <td style="padding: 14px;">02/04/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">1:43.391</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">-</td>
+</tr>
+
+<!-- 5. 31/03/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Imola" data-data="2026-03-31" data-tempo="93.307">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">Ferrari 499P</td>
+  <td style="padding: 14px;">Imola</td>
+  <td style="padding: 14px;">31/03/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">1:33.307</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">-</td>
+</tr>
+
+<!-- 4. 31/03/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Imola" data-data="2026-03-31" data-tempo="94.679">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">Genesis GMR-001</td>
+  <td style="padding: 14px;">Imola</td>
+  <td style="padding: 14px;">31/03/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">1:34.679</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">-</td>
+</tr>
+
+<!-- 3. 31/03/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Imola" data-data="2026-03-31" data-tempo="107.661">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">Porsche 992 GT3 R</td>
+  <td style="padding: 14px;">Imola</td>
+  <td style="padding: 14px;">31/03/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">1:47.661</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">-</td>
+</tr>
+
+<!-- 2. 10/03/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Imola" data-data="2026-03-10" data-tempo="105.892">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">Porsche 992 GT3 R</td>
+  <td style="padding: 14px;">Imola</td>
+  <td style="padding: 14px;">10/03/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">1:45.892</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">-</td>
+</tr>
+
+
+<!-- 1. 07/03/2026 -->
+<tr style="border-bottom: 1px solid #222;" data-sim="LMU" data-pista="Imola" data-data="2026-03-07" data-tempo="105.531">
+  <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+  <td style="padding: 14px;">LMU</td>
+  <td style="padding: 14px;">Porsche 992 GT3 R</td>
+  <td style="padding: 14px;">Imola</td>
+  <td style="padding: 14px;">07/03/2026</td>
+  <td style="padding: 14px; color: #00ff00; font-weight: bold;">1:45.531</td>
+  <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">-</td>
+</tr>
+    </tbody>
+  </table>
+</div>
+
+<form id="form-tempi" action="https://formspree.io/f/myeyzdgd" method="POST" style="display: flex; flex-direction: column; gap: 14px; max-width: 500px; margin: 0 auto; background: #181818; padding: 20px; border-radius: 8px; border: 2px solid #ff0000; box-sizing: border-box;">
+  <p style="color: #aaa; font-size: 0.85rem; margin: 0 0 5px 0;">
+    ⚠️ <strong>Nota:</strong> Inserisci i nomi con le maiuscole corrette (es. <em>Ferrari 499P</em>, <em>Imola</em>, <em>iRacing</em>) per una corretta registrazione sulla Spec Board.
+  </p>
+  <input type="text" name="pilota" placeholder="Pilota / Gamertag (es. Ricky Dog)" required style="padding: 10px; background: #111; color: #fff; border: 1px solid #444; border-radius: 5px;">
+  <input type="text" name="simulatore" placeholder="Simulatore (es. GT7, LMU, iRacing)" required style="padding: 10px; background: #111; color: #fff; border: 1px solid #444; border-radius: 5px;">
+  <input type="text" name="auto" placeholder="Auto (es. Ferrari 499P)" required style="padding: 10px; background: #111; color: #fff; border: 1px solid #444; border-radius: 5px;">
+  <input type="text" name="tracciato" placeholder="Pista (es. Imola)" required style="padding: 10px; background: #111; color: #fff; border: 1px solid #444; border-radius: 5px;">
+  <input type="text" name="data" placeholder="Data (es. 10/04/2026)" required style="padding: 10px; background: #111; color: #fff; border: 1px solid #444; border-radius: 5px;">
+  <input type="text" name="tempo" placeholder="Tempo Giro (es. 1:33.307)" required style="padding: 10px; background: #111; color: #fff; border: 1px solid #444; border-radius: 5px;">
+  <input type="text" name="note" placeholder="Note facoltative (es. Engine Swap, Setup Fisso, Pioggia)" style="padding: 10px; background: #111; color: #fff; border: 1px solid #444; border-radius: 5px;">
+  <button type="submit" style="background: #ff0000; color: #fff; font-weight: bold; padding: 12px; border: none; border-radius: 5px; cursor: pointer; text-transform: uppercase;">INVIA TELEMETRIA 🏁</button>
+</form>
+
+  <div class="musica" style="margin-top: 50px;">
+    <h2 class="titolo-garanzia">Verifica dei Tempi ⏱️</h2>
+    <p>La precisione del dato prima di tutto 😉</p>
+    <h2 class="titolo-garanzia">Garanzia dei circuiti (e dei polsi) 👍</h2>
+    <h1 class="disclaimer">
+      I tempi inviati vengono verificati per evitare tagli pista impropri o glitch di gioco.<br>
+      Nessun rimborso per i cordoli presi male o per i sovrasterzi improvvisi nei settori veloci 🏎️
+    </h1>
+  </div>
+
+  <div class="marquee-container">
+    <div class="marquee-text">
+      Il secondo è il primo dei perdenti... ma se invii un buon tempo entri comunque nella lista — Parola di Ricky Dog.
+    </div>
+  </div>
+
+<div style="max-width: 1200px; width: 95%; margin: 60px auto 10px auto; text-align: center;">
+  <h2 style="color: #ff0000; font-size: 1.8rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">☠️ Assetto Wall — AC & ACE Swap Lab ☠️</h2>
+  <p style="color: #aaa; font-size: 0.95rem;">La classifica ufficiale per le bare a 4 ruote provate sul canale. Test drive estremi sugli <strong>Assetto Corsa</strong>.</p>
+</div>
+
+<div class="tabella-container" style="overflow-x: auto; width: 95%; max-width: 1200px; margin: 15px auto 50px auto; border-radius: 8px; border: 2px solid #ff0000; box-sizing: border-box;">
+  <table id="assettoWallTable" style="width: 100%; border-collapse: collapse; background: #111; color: #fff; text-align: left;">
+    <thead>
+      <tr style="background: #ff0000; color: #000; font-weight: bold;">
+        <th style="padding: 14px;">Pilota</th>
+        <th style="padding: 14px;">Auto</th>
+        <th style="padding: 14px;">Pista</th>
+        <th style="padding: 14px;">CV / Peso</th>
+        <th style="padding: 14px;">Livello Bara</th>
+        <th style="padding: 14px;">Tempo Giro</th>
+        <th style="padding: 14px;">Giudizio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <tr style="border-bottom: 1px solid #222;">
+        <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+        <td style="padding: 14px;">Civic Type R + K24 Turbo</td>
+        <td style="padding: 14px;">Deep Forest Raceway</td>
+        <td style="padding: 14px;">450 CV / 1050 kg</td>
+        <td style="padding: 14px; font-size: 1.1rem;">💀💀 <span style="font-size: 0.8rem; color: #aaa;">(2/5)</span></td>
+        <td style="padding: 14px; color: #00ff00; font-weight: bold;">1:28.450</td>
+        <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">Si guida bene, trazione ottima.</td>
+      </tr>
+
+      <tr style="border-bottom: 1px solid #222;">
+        <td style="padding: 14px; font-weight: bold; color: #ff0000;">Ricky Dog</td>
+        <td style="padding: 14px;">Sambabus + Porsche Flat-6 Turbo</td>
+        <td style="padding: 14px;">Deep Forest Raceway</td>
+        <td style="padding: 14px;">650 CV / 950 kg</td>
+        <td style="padding: 14px; font-size: 1.1rem;">💀💀💀💀💀 <span style="font-size: 0.8rem; color: #ff0000; font-weight: bold;">(5/5)</span></td>
+        <td style="padding: 14px; color: #ff0000; font-weight: bold;">1:39.999</td>
+        <td style="padding: 14px; color: #aaa; font-size: 0.85rem;">Incurvabile. Vuole ucciderti in staccata.</td>
+      </tr> -->
+    </tbody>
+  </table>
+</div>
+
+  <h2 class="citazione">"La telemetria non mente mai."</h2>
+
+  <div class="sezione-contatti" style="text-align: center; margin-top: 50px;">
+    <p>Vuoi contestare un tempo o segnalare un bug sulla scheda?</p>
+    <a href="mailto:info.specdog@gmail.com" target="_blank" rel="noopener noreferrer" class="bottone-email">Contatta il box del Lab :)</a>
+  </div>
+
+  <h1 class="footer" style="text-align: center; margin-top: 60px; opacity: 0.6;">Spec Labs | 4.3E Near | 2026</h1>
+  
+  <button id="spec-widget-btn" class="spec-fab">
+    <img src="spec.webp" alt="Chiedi a Spec AI">
+  </button>
+  <div id="spec-chat-window" class="spec-chat-window hidden">
+    <div class="chat-header">
+        <div class="header-info">
+            <span class="status-dot"></span>
+            <h4>Spec AI</h4>
+        </div>
+        <button id="close-chat-btn">&times;</button>
+    </div>
+    
+    <div id="chat-box" class="chat-box">
+        <div class="message ai-message">
+            Bella! Sono Spec AI. Stai controllando i tempi sul giro o vuoi consigli su come staccare più tardi ad Imola? Spara!
+        </div>
+    </div>
+    
+    <div class="chat-input-area">
+        <input type="text" id="user-input" placeholder="Chiedi a Spec...">
+        <button id="send-btn">Invia!</button>
+    </div>
+  </div>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+        const selectPista = document.getElementById("filtro-pista");
+        const selectOrdina = document.getElementById("ordina-per");
+        const tbody = document.querySelector("#specBoardTable tbody");
+
+        function aggiornaTabella() {
+        const pistaScelta = selectPista.value;
+        const ordineScelto = selectOrdina.value;
+        const righe = Array.from(tbody.querySelectorAll("tr"));
+
+        righe.forEach(riga => {
+            const pistaRiga = riga.getAttribute("data-pista");
+            if (pistaScelta === "TUTTE" || pistaRiga === pistaScelta) {
+              riga.style.display = "";
+            } else {
+              riga.style.display = "none";
+            }
+        });
+
+        righe.sort((a, b) => {
+            if (ordineScelto === "data-desc") {
+              return b.getAttribute("data-data").localeCompare(a.getAttribute("data-data"));
+            } else if (ordineScelto === "data-asc") {
+              return a.getAttribute("data-data").localeCompare(b.getAttribute("data-data"));
+            } else if (ordineScelto === "tempo-asc") {
+              return parseFloat(a.getAttribute("data-tempo")) - parseFloat(b.getAttribute("data-tempo"));
+            } else if (ordineScelto === "tempo-desc") {
+              return parseFloat(b.getAttribute("data-tempo")) - parseFloat(a.getAttribute("data-tempo"));
+            }
+        });
+
+        righe.forEach(riga => tbody.appendChild(riga));
+        }
+
+        selectPista.addEventListener("change", aggiornaTabella);
+        selectOrdina.addEventListener("change", aggiornaTabella);
+
+        aggiornaTabella();
+        });
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="spec.js"></script>
+ </body>
+</html>

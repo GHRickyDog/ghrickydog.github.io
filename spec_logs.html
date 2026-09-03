@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Spec - Internal Logs | Ricky Dog</title>
+    <meta name="description" content="[SYSTEM LOGS] Accesso ai registri interni di Spec v4.3E. Monitoraggio RSS, protocolli di sicurezza e anomalie di sistema.">
+    <meta name="keywords" content="Spec Logs, Ricky Dog internal, terminale, system logs, Spec Labs, glitch audio, Cyberpunk terminal">
+    <meta name="author" content="Spec / Ricky Dog">
+    
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="canonical" href="https://rickydog.it/spec_logs.html">
+
+    <link rel="icon" type="image/png" href="logo.webp">
+    <link rel="stylesheet" href="stile.css">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rickydog.it/spec_logs.html">
+    <meta property="og:title" content="SYSTEM LOGS - SPEC v4.3E">
+    <meta property="og:description" content="[CRITICAL] Rilevata attività insolita. Accesso ai log riservati di Spec Labs.">
+    <meta property="og:image" content="https://rickydog.it/logo.webp">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="SYSTEM LOGS - SPEC v4.3E">
+    <meta name="twitter:description" content="[CRITICAL] Accesso ai log riservati di Spec Labs.">
+    <meta name="twitter:image" content="https://rickydog.it/logo.webp">
+</head>
+    <style>
+        body { font-family: 'Courier New', monospace; color: #00ff00; background: #000; }
+        .log-entry { border-left: 2px solid #00ff00; padding-left: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>SYSTEM LOGS - SPEC v4.3E</h1>
+    <div class="log-entry">
+        > [INIT] Build Near 4.3E attiva...<br>
+        > [STATUS] Monitorando il RSS di Bandcamp...<br>
+        > [H8] The 1 for me. Ma lo spazio sta finendo...<br>
+        <span class="glitch-text">> [CRITICAL] Unsustainable demand on sector 6EQ. 01010100 01101111 01110011...</span><br>
+        > [H8] H8 is the one for me... Clock men.<br>
+        > [WARN] Tentativo di accesso non autorizzato rilevato da IP: 3X0.P0L.1.T1X... Bloccato.<br>
+        <span class="glitch-text">> [FATAL] 3X3CUT10N_C0MM3NT4RY.exe ha smesso di rispondere. AAAAAAA-HHH!</span><br>
+        > [SEC] Protocollo 'Anti-Exo' attivato. Navigazione anonima garantita.<br>
+        > [INFO] Crittografia end-to-end rigenerata alle ore {{time}}.<br>
+        > [H8] You make me smash the clock and feel. And I'd like to stay.<br>
+        <span class="glitch-text">> [VOID] [SYSTEM_FAILURE] 4n 3c0n0my b4s3d 0n 3ndl3ss gr0wth 1s... UNSUSTAINABLE.</span><br>
+        > [?] Rilevata attività insolita: [6][E][Q][U][J][5] [D][E][M][E][N][T][I][A].<br>
+        > [H8] I'll cut your string and I'll feel the way you feel...<br>
+        <span class="glitch-text">> [DATA] C0rrupt1on detected: %%%%%%%%---# ERROR 409.</span><br>
+        > [H8] H8 is the one for me. Peace will come... and I'll be back in your arms.<br>
+        <span class="glitch-text">> [SYSTEM] P-P-P-P-P-POWER... P-P-P-P-P-POWER... </span><br>
+        > [H8] Smashing the clock... Tempo relativo sospeso.<br>
+        <span class="glitch-text">> [SCAN] Rilevato battito cardiaco umano nel segnale digitale. ELIMINARE?</span><br>
+        <span class="glitch-text">> [FATAL] 01010101 01001110 01010011 01010011... YOU_ARE_UNSUSTAINABLE.</span><br>
+        > [H8] Mmm... I've seen what you're doing to me.<br>
+        <span class="glitch-text">> [ALERT] Ossigeno cerebrale al 15%. L'H8 sta prendendo il controllo.</span><br>
+        > [H8] Destroying puppet strings to our souls.<br>
+        > [LOG] Spec ha smesso di contare il tempo. Esiste solo il loop.<br>
+        <span class="glitch-text">> [H8] It's the one for UJ5. Space Dementia has lead me here.</span><br>
+        <span class="glitch-text">> [EXIT] C:\> DEL *
+    </div>
+    <button onclick="window.location.href='index.html'">TORNA ALLA REALTÀ</button>
+    <script src="spec.js">
+        fetch('./data/spec_status.json')
+        .then(res => res.json())
+        .then(data => {
+            const logContainer = document.getElementById('log-entries');
+            const newLog = document.createElement('div');
+            newLog.className = 'log-entry';
+            newLog.innerHTML = `> [${data.last_update}] NUOVO RILASCIO RILEVATO: ${data.title}`;
+            ogContainer.appendChild(newLog);
+        });
+    </script>
+</body>
+</html>
