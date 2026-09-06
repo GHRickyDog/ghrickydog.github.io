@@ -233,5 +233,12 @@
         moveSlide(1);
     }, 7500);
   </script>
+
+  <script>
+    if (window.location.pathname.endsWith('.html')) {
+      let cleanUrl = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
+      window.history.replaceState(null, '', cleanUrl + window.location.search);
+    }
+  </script>
  </body>
 </html>
