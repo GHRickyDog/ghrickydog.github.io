@@ -463,54 +463,61 @@
     </div>
   </div>
 
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const inputRicerca = document.getElementById("ricerca-specboard");
-    const selectOrdina = document.getElementById("ordina-per");
-    const tbody = document.querySelector("#specBoardTable tbody");
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const inputRicerca = document.getElementById("ricerca-specboard");
+  const selectOrdina = document.getElementById("ordina-per");
+  const tabella = document.getElementById("specBoardTable");
 
-    if (!tbody) return;
+  if (!tabella) return;
 
-    function filtraEOrdinaTabella() {
-      const filtro = inputRicerca ? inputRicerca.value.toLowerCase().trim() : "";
-      const ordineScelto = selectOrdina ? selectOrdina.value : "data-desc";
-      const righe = Array.from(tbody.querySelectorAll("tr"));
+  function eseguiFiltroEOrdinamento() {
+    const testoCercato = inputRicerca ? inputRicerca.value.toLowerCase().trim() : "";
+    const ordineScelto = selectOrdina ? selectOrdina.value : "data-desc";
 
-      righe.forEach(riga => {
-        const testoRiga = riga.innerText.toLowerCase();
-        if (testoRiga.includes(filtro)) {
-          riga.style.display = "";
-        } else {
-          riga.style.display = "none";
-        }
-      });
+    const righe = Array.from(tabella.querySelectorAll("tr")).filter(riga => !riga.querySelector("th"));
 
-      righe.sort((a, b) => {
-        if (ordineScelto === "data-desc") {
-          return (b.getAttribute("data-data") || "").localeCompare(a.getAttribute("data-data") || "");
-        } else if (ordineScelto === "data-asc") {
-          return (a.getAttribute("data-data") || "").localeCompare(b.getAttribute("data-data") || "");
-        } else if (ordineScelto === "tempo-asc") {
-          return (parseFloat(a.getAttribute("data-tempo")) || Infinity) - (parseFloat(b.getAttribute("data-tempo")) || Infinity);
-        } else if (ordineScelto === "tempo-desc") {
-          return (parseFloat(b.getAttribute("data-tempo")) || -Infinity) - (parseFloat(a.getAttribute("data-tempo")) || -Infinity);
-        }
-      });
-
-      righe.forEach(riga => tbody.appendChild(riga));
-    }
-
-    if (inputRicerca) {
-      inputRicerca.addEventListener("input", filtraEOrdinaTabella);
-    }
-  
-    if (selectOrdina) {
-      selectOrdina.addEventListener("change", filtraEOrdinaTabella);
-    }
-
-    filtraEOrdinaTabella();
+    righe.forEach(riga => {
+      const testoCompletoRiga = riga.innerText.toLowerCase();
+      
+      if (testoCompletoRiga.includes(testoCercato)) {
+        riga.style.display = "";
+      } else {
+        riga.style.display = "none";
+      }
     });
-  </script>
+
+    righe.sort((a, b) => {
+      const dataA = a.getAttribute("data-data") || "";
+      const dataB = b.getAttribute("data-data") || "";
+      const tempoA = parseFloat(a.getAttribute("data-tempo")) || Infinity;
+      const tempoB = parseFloat(b.getAttribute("data-tempo")) || Infinity;
+
+      if (ordineScelto === "data-desc") return dataB.localeCompare(dataA);
+      if (ordineScelto === "data-asc") return dataA.localeCompare(dataB);
+      if (ordineScelto === "tempo-asc") return tempoA - tempoB;
+      if (ordineScelto === "tempo-desc") return tempoB - tempoA;
+      return 0;
+    });
+
+    const parent = righe[0]?.parentNode;
+    if (parent) {
+      righe.forEach(riga => parent.appendChild(riga));
+    }
+  }
+
+  if (inputRicerca) {
+    inputRicerca.addEventListener("keyup", eseguiFiltroEOrdinamento);
+    inputRicerca.addEventListener("input", eseguiFiltroEOrdinamento);
+  }
+
+  if (selectOrdina) {
+    selectOrdina.addEventListener("change", eseguiFiltroEOrdinamento);
+  }
+
+  eseguiFiltroEOrdinamento();
+});
+</script>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
