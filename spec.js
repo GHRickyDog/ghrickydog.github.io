@@ -27,7 +27,7 @@ let keys = {};
 document.addEventListener('keydown', (e) => {
     keys[e.key.toLowerCase()] = true;
     if (keys['s'] && keys['p'] && keys['c']) {
-        window.location.href = 'spec_logs.html';
+        window.location.href = '/Spec_Logs/';
     }
 });
 document.addEventListener('keyup', (e) => { 
